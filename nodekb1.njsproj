@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{89ee66bd-8670-403e-b4d1-76542cefe59c}</ProjectGuid>
+        <ProjectHome>..\..\..\..\..\Projects\nodekb\</ProjectHome>
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile>app.js</StartupFile>
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include="package-lock.json" />
+        <Content Include="package.json" />
+        <Compile Include="app.js" />
+        <Compile Include="config\database.js" />
+        <Compile Include="config\passport.js" />
+        <Compile Include="models\article.js" />
+        <Compile Include="models\user.js" />
+        <Compile Include="models\workload.js" />
+        <Compile Include="models\workspace.js" />
+        <Compile Include="routes\articles.js" />
+        <Compile Include="routes\users.js" />
+        <Compile Include="routes\workload.js" />
+        <Compile Include="routes\workspace.js" />
+        <Content Include="views\add_article.pug" />
+        <Content Include="views\article.pug" />
+        <Content Include="views\edit_article.pug" />
+        <Content Include="views\fileupload.pug" />
+        <Content Include="views\index.pug" />
+        <Content Include="views\layout.pug" />
+        <Content Include="views\login.pug" />
+        <Content Include="views\message.pug" />
+        <Content Include="views\register.pug" />
+        <Content Include="views\webservice.pug" />
+        <Content Include="views\workload.pug" />
+        <Content Include="views\workload_create.pug" />
+        <Content Include="views\workspace.pug" />
+        <Content Include="views\workspace_create.pug" />
+        <Content Include="public\css\bootstrap-theme.min.css" />
+        <Content Include="public\css\bootstrap.min.css" />
+        <Content Include="public\css\style.css" />
+        <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+        <Compile Include="public\js\bootstrap.min.js" />
+        <Compile Include="public\js\jquery.min.js" />
+        <Compile Include="public\js\main.js" />
+        <Compile Include="public\js\scripts.js" />
+        <Content Include="public\js\jquery-ui-1.12.1\AUTHORS.txt" />
+        <Content Include="public\js\jquery-ui-1.12.1\LICENSE.txt" />
+        <Content Include="public\js\jquery-ui-1.12.1\index.html" />
+        <Content Include="public\js\jquery-ui-1.12.1\jquery-ui.css" />
+        <Content Include="public\js\jquery-ui-1.12.1\jquery-ui.min.css" />
+        <Content Include="public\js\jquery-ui-1.12.1\jquery-ui.structure.css" />
+        <Content Include="public\js\jquery-ui-1.12.1\jquery-ui.structure.min.css" />
+        <Content Include="public\js\jquery-ui-1.12.1\jquery-ui.theme.css" />
+        <Content Include="public\js\jquery-ui-1.12.1\jquery-ui.theme.min.css" />
+        <Content Include="public\js\jquery-ui-1.12.1\package.json" />
+        <Compile Include="public\js\jquery-ui-1.12.1\jquery-ui.js" />
+        <Compile Include="public\js\jquery-ui-1.12.1\jquery-ui.min.js" />
+        <Content Include="public\js\jquery-ui-1.12.1\images\ui-icons_444444_256x240.png" />
+        <Content Include="public\js\jquery-ui-1.12.1\images\ui-icons_555555_256x240.png" />
+        <Content Include="public\js\jquery-ui-1.12.1\images\ui-icons_777620_256x240.png" />
+        <Content Include="public\js\jquery-ui-1.12.1\images\ui-icons_777777_256x240.png" />
+        <Content Include="public\js\jquery-ui-1.12.1\images\ui-icons_cc0000_256x240.png" />
+        <Content Include="public\js\jquery-ui-1.12.1\images\ui-icons_ffffff_256x240.png" />
+        <Compile Include="public\js\jquery-ui-1.12.1\external\jquery\jquery.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="config" />
+        <Folder Include="models" />
+        <Folder Include="public" />
+        <Folder Include="public\css" />
+        <Folder Include="public\fonts" />
+        <Folder Include="public\js" />
+        <Folder Include="public\js\jquery-ui-1.12.1" />
+        <Folder Include="public\js\jquery-ui-1.12.1\external" />
+        <Folder Include="public\js\jquery-ui-1.12.1\external\jquery" />
+        <Folder Include="public\js\jquery-ui-1.12.1\images" />
+        <Folder Include="routes" />
+        <Folder Include="views" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+    <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>
